@@ -11,7 +11,6 @@ public class Calculator {
 
             for (int i = 0; i < products.size(); i++) {
                 sum += products.get(i).getPrice();
-
         }
 
         return sum;

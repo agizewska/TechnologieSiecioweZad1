@@ -12,6 +12,7 @@
   </head>
   <body>
   <h1> Sklep ze wszystkim </h1>
+  <h2> Wybierz produkty </h2>
   <form action="/ShopController" method="post">
     <div> Produkt: <input type="text" name="p1"> Cena: <input type="text" name="price1"></div>
     <div> Produkt: <input type="text" name="p2"> Cena: <input type="text" name="price2"></div>

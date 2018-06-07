@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet (name = "/ShopController", urlPatterns = {"/ShopController"})
+@WebServlet(name = "/ShopController", urlPatterns = {"/ShopController"})
 public class ShopController extends HttpServlet {
 
     private Product product1, product2, product3, product4;
@@ -27,18 +27,21 @@ public class ShopController extends HttpServlet {
         if (!request.getParameter("p1").isEmpty() && !request.getParameter("price1").isEmpty()) {
             product1 = new Product(request.getParameter("p1"), Double.parseDouble(request.getParameter("price1")));
             products.add(product1);
-            if (!request.getParameter("p2").isEmpty() && !request.getParameter("price3").isEmpty()) {
-                product2 = new Product(request.getParameter("p2"), Double.parseDouble(request.getParameter("price2")));
-                products.add(product2);
-                if (!request.getParameter("p3").isEmpty() && !request.getParameter("price3").isEmpty()) {
-                    product3 = new Product(request.getParameter("p3"), Double.parseDouble(request.getParameter("price3")));
-                    products.add(product3);
-                    if (!request.getParameter("p4").isEmpty() && !request.getParameter("price4").isEmpty()) {
-                        product4 = new Product(request.getParameter("p4"), Double.parseDouble(request.getParameter("price4")));
-                        products.add(product4);
-                    }
-                }
-            }
+        }
+
+        if (!request.getParameter("p2").isEmpty() && !request.getParameter("price2").isEmpty()) {
+            product2 = new Product(request.getParameter("p2"), Double.parseDouble(request.getParameter("price2")));
+            products.add(product2);
+        }
+
+        if (!request.getParameter("p3").isEmpty() && !request.getParameter("price3").isEmpty()) {
+            product3 = new Product(request.getParameter("p3"), Double.parseDouble(request.getParameter("price3")));
+            products.add(product3);
+        }
+
+        if (!request.getParameter("p4").isEmpty() && !request.getParameter("price4").isEmpty()) {
+            product4 = new Product(request.getParameter("p4"), Double.parseDouble(request.getParameter("price4")));
+            products.add(product4);
         }
 
         if (!products.isEmpty()) {
